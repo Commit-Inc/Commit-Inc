@@ -1,0 +1,235 @@
+/* ////////////////////////////////NAVBAR////////////////////////////// */
+
+.navbar {
+    padding: 0.5% 6% 0.5% 4%;
+    width: 90vw;
+    background-color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0px 7px 116px rgba(0, 0, 0, 0.09);
+}
+
+.nav-item {
+    margin: 0 5%;
+}
+
+.navbar-nav {
+    width: 25vw;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.navbar-brand img {
+    margin-right: 10%;
+}
+
+
+.navbar button {
+    padding: 0;
+    border: none;
+    background: none;
+
+}
+
+nav a {
+    color: black;
+}
+
+
+
+
+/* Hamburger buttonn*/
+
+button:focus {
+    outline: none;
+}
+
+.animated-icon2 {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    margin: 0px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    border: 0px;
+
+}
+
+.animated-icon2 span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+
+}
+
+
+.animated-icon2 span {
+    background: black;
+}
+
+
+.animated-icon2 span:nth-child(1) {
+    top: 0px;
+}
+
+.animated-icon2 span:nth-child(2),
+.animated-icon2 span:nth-child(3) {
+    top: 10px;
+}
+
+.animated-icon2 span:nth-child(4) {
+    top: 20px;
+}
+
+.animated-icon2.open span:nth-child(1) {
+    top: 11px;
+    width: 0%;
+    left: 50%;
+}
+
+.animated-icon2.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.animated-icon2.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.animated-icon2.open span:nth-child(4) {
+    top: 11px;
+    width: 0%;
+    left: 50%;
+}
+
+
+/*sliding menu*/
+
+
+@media(max-width:992px) {
+    .navbar .navbar-collapse.collapsing {
+        height: auto !important;
+        z-index: 2;
+    }
+
+    .navbar .lateral-left {
+        left: -100%;
+        animation: slide-out-left 1200ms forwards;
+        z-index: 2;
+    }
+
+    .navbar .lateral-left.open {
+        animation: slide-in-left 1200ms forwards;
+    }
+
+
+    .navbar .navbar-collapse {
+        top: 0px;
+        bottom: 0px;
+        position: fixed;
+        width: 80%;
+        width: calc(100% - 60px);
+        max-width: 60vw;
+        height: auto !important;
+
+
+        background: #f8f8f8;
+        padding: 30px;
+
+    }
+
+    .navbar-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100% !important;
+    }
+
+    .active {
+        width: unset !important;
+    }
+
+    .navbar .lateral-left.open,
+    .navbar .lateral-right.open {
+        display: flex;
+        overflow-y: auto;
+    }
+}
+
+@keyframes slide-in-left {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+
+@keyframes slide-out-left {
+    from {
+        left: 0%;
+    }
+
+    to {
+        left: -100;
+    }
+}
+
+
+
+.active {
+    border-radius: 15px;
+    background-color: #28A649;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 5% !important;
+    color: white;
+    height: 40px;
+}
+
+.nav-item:focus {
+    color: unset !important;
+}
+
+.nav-item,
+.navbar-brand {
+    transition: all 0.25s linear;
+}
+
+.nav-item:hover,
+.navbar-brand:hover {
+    color: unset !important;
+    transform: scale(1.03) translateY(-2px);
+}

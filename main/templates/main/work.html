@@ -1,0 +1,316 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Commit Inc.</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css"
+      integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni"
+      crossorigin="anonymous"
+    />
+
+    <!-- bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <!-- bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- FONT AWESOME -->
+    <script
+      src="https://kit.fontawesome.com/c8e4d183c2.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- CUSTOM STYLESHEET -->
+
+    <link rel="stylesheet" href="{% static "css/footer.css" %}">
+    <link rel="stylesheet" href="{% static "css/process.css" %}"> 
+    <link rel="stylesheet" href="{% static "css/navbar.css" %}"> 
+    <link rel="stylesheet" href="{% static "css/home.css" %}"> 
+    <link rel="stylesheet" href="{% static "css/work.css" %}">
+  </head>
+
+  <body>
+    <!-- ///////////////////////////// NAVBAR /////////////////////////// -->
+
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="{% url 'home' %}">
+        <img
+          src="{% static 'img/logo.png' %}"
+          alt=""
+          width="50"
+          height="50"
+          class="d-inline-block align-text-top"
+        />
+        Commit
+      </a>
+      <button
+        class="navbar-toggler second-button collapsed"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        id="hamb"
+      >
+        <div class="animated-icon2">
+          <span></span><span></span><span></span><span></span>
+        </div>
+      </button>
+      <div
+        class="collapse navbar-collapse lateral-left"
+        id="navbarNavAltMarkup"
+      >
+      <div class="navbar-nav ml-auto" id="navlist">
+        <a class="nav-item nav-link " href="{% url 'about' %}">About <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link active" href="{% url 'work' %}">Work</a>
+        <a class="nav-item nav-link" href="{% url 'process' %}">Process</a>
+        <a class="nav-item nav-link" href="{% url 'contact' %}">Contact</a>
+      </div>
+      </div>
+    </nav>
+
+    <!--///////////////////////////// OUR WORK ///////////////////////// -->
+
+    <div class="ourwork-heading">
+      <h1>Our Work</h1>
+    </div>
+
+    <section id="work">
+      <div class="row work-row">
+        <div class="col-lg-4 col-md-6 work-container">
+          <a href="https://yearbook21.bits-sarc.org/">
+            <div class="card work-card">
+              <img
+                class="card-img-top"
+                src="{% static 'img/work/yearbook.png' %}"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h3>Yearbook Portal</h3>
+                <p class="card-text">UI/UX, Website Development</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-4 col-md-6 work-container">
+          <a href="https://sarthakeash.github.io/delassus_dvm/">
+            <div class="card work-card">
+              <img
+                class="card-img-top"
+                src="{% static 'img/work/delassus.png' %}"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h3>Delassus website clone</h3>
+                <p class="card-text">Frontend Development</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-4 col-md-6 work-container">
+          <a href="https://omni-cry0g.netlify.app/">
+            <div class="card work-card">
+              <img
+                class="card-img-top"
+                src="{% static 'img/work/food.png' %}"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h3>Food shopping website</h3>
+                <p class="card-text">UI/UX, full stack Development</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-4 col-md-6 work-container">
+          <a href="https://sarthakeash.github.io/dvm3/">
+            <div class="card work-card">
+              <img
+                class="card-img-top"
+                src="{% static 'img/work/eshop.png' %}"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h3>E-shopping Website</h3>
+                <p class="card-text">UI/UX, Website Development</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-4 col-md-6 work-container">
+          <a href="home.html">
+            <div class="card work-card">
+              <img
+                class="card-img-top"
+                src="{% static 'img/work/commit-website.png' %}"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h3>Our Own Website</h3>
+                <p class="card-text">UI/UX, Fullstack Development</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-4 col-md-6 work-container">
+          <a href="https://github.com/cry0genic/Zodiac">
+            <div class="card work-card">
+              <img
+                class="card-img-top"
+                src="{% static 'img/work/django.png' %}"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h3>Django Backend</h3>
+                <p class="card-text">Backend Development</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-4 col-md-6 work-container">
+          <a
+            href="https://sakshamdevelops.github.io/Portfolio-Website/work.html"
+          >
+            <div class="card work-card">
+              <img
+                class="card-img-top"
+                src="{% static 'img/work/saksham.png' %}"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h3>Saksham Aggarwal</h3>
+                <p class="card-text">Personal Website</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-4 col-md-6 work-container">
+          <a href="https://sarthakeash.github.io/myown/">
+            <div class="card work-card">
+              <img
+                class="card-img-top"
+                src="{% static 'img/work/sarthak.png' %}"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h3>Sarthak Arora</h3>
+                <p class="card-text">Personal Website</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-4 col-md-6 work-container">
+          <a href="https://cry0genic.github.io/about.html">
+            <div class="card work-card">
+              <img
+                class="card-img-top"
+                src="{% static 'img/work/aditya.png' %}"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h3>Aditya Thakur</h3>
+                <p class="card-text">Personal Website</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="logo-footer">
+        <a class="navbar-brand" href="{% url 'home' %}">
+          <img
+            src="{% static 'img/logo.png' %}"
+            alt=""
+            width="50"
+            height="50"
+            class="d-inline-block align-text-top flogo"
+          />
+          Commit
+        </a>
+        <p>
+          We build beautiful experiences and humane designs for your robust
+          online presence
+        </p>
+      </div>
+
+      <div id="footer">
+        <div class="footer-links">
+          <a class="nav-item" href="{% url 'work' %}">Work</a>
+          <a class="nav-item" href="{% url 'home' %}">Home</a>
+          <a class="nav-item" href="{% url 'process' %}">Process</a>
+          <a class="nav-item" href="{% url 'about' %}">About</a>
+          <a class="nav-item" href="{% url 'contact' %}">Contact</a>
+        </div>
+
+        <div class="contact-footer">
+          +91 8872711250
+          <p>contact@commit.net.in</p>
+          <a href="https://github.com/Commit-Inc" target="_blank" id="gh"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/company/commit-incorp"
+            target="_blank"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a href="https://twitter.com/CommitInc" target="_blank"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/commitinc/"
+            target="_blank"
+            id="insta"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+      <div class="email-footer">
+        <p>Drop Your Email</p>
+        <form action="" class="email-form" method="POST">
+          {% csrf_token %}
+          <button type="submit" class="email-button btn btn-dark btn-md">
+            <i class="fas fa-arrow-right"></i>
+          </button>
+          <input type="text" placeholder="Your Email" name="email-enter" />
+        </form>
+        <p class="copyright">© Commit Inc. 2021</p>
+      </div>
+    </footer>
+    <script src="{% static 'js/work-script.js' %}"></script>
+  </body>
+</html>

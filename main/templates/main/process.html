@@ -1,0 +1,382 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commit Inc.</title>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css"
+        integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+
+    <!-- bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!--DATA AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+
+    <!-- CUSTOM STYLESHEET -->
+    <link rel="icon" href="{% static "img/favicon.ico" %}">
+    <link rel="stylesheet" href="{% static "css/footer.css" %}">
+    <link rel="stylesheet" href="{% static "css/navbar.css" %}">
+    <link rel="stylesheet" href="{% static "css/process.css" %}">
+
+</head>
+
+
+<body>
+
+    <!-- ///////////////////////////// NAVBAR /////////////////////////// -->
+
+    <nav class="navbar navbar-expand-lg ">
+
+        <a class="navbar-brand" href="{% url 'home' %}">
+            <img src="{% static 'img/logo.png' %}" alt="" width="50" height="50" class="d-inline-block align-text-top">
+            Commit
+        </a>
+        <button class="navbar-toggler second-button collapsed" type="button" data-toggle="collapse"
+            data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+            aria-label="Toggle navigation" id="hamb">
+            <div class="animated-icon2"><span></span><span></span><span></span><span></span></div>
+        </button>
+        <div class="collapse navbar-collapse lateral-left" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto" id="navlist">
+                <a class="nav-item nav-link " href="{% url 'about' %}">About <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="{% url 'work' %}">Work</a>
+                <a class="nav-item nav-link active" href="{% url 'process' %}">Process</a>
+                <a class="nav-item nav-link" href="{% url 'contact' %}">Contact</a>
+              </div>
+        </div>
+    </nav>
+
+    <!-- /////////////////////////////// HERO SECTION //////////////////////////// -->
+
+    <section id="hero">
+
+        
+        <div class="row title-row">
+            <div class="col-lg-6 hero-info">
+
+                <h1 class="big-heading">We Commit <span id="cursor">_</span></h1>
+
+                <div class="card we-commit" data-aos="fade-up" data-aos-duration="1000">
+
+                    <div class="card-horizontal">
+                        <div class="img-square-wrapper1">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Remarkable Quality</h4>
+                                <p class="card-text"> We achieve premium quality with our refined design process and
+                                    constant feedback loop.
+                                </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card we-commit" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                    <div class="card-horizontal">
+                        <div class="img-square-wrapper2">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Punctuality</h4>
+                                <p class="card-text"> We value your time and are committed to meet the deadlines with
+                                    our dedicated team.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card we-commit" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
+                    <div class="card-horizontal">
+                        <div class="img-square-wrapper3">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Integrity</h4>
+                                <p class="card-text">We strongly adhere to our morals and strong work ethic which makes
+                                    us reliable.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-6 illustration-parent">
+                <!-- <img src="./assets/images/hero.png" alt="iphone-mockup" class="illustration"> -->
+            </div>
+
+        </div>
+
+
+
+
+    </section>
+
+    <!-- /////////////////////////// Our Process ////////////////////////////// -->
+
+    <section id="our-process">
+        <!-- <img src="../../static/img/process/gitside.png" class="rightgit"> -->
+
+        <div class="process-container">
+
+            <div class="process-heading">
+                <h4>
+                    Our process
+                </h4>
+                <h1>We are commited to create tailor-made
+                    perfect products for people </h1>
+
+            </div>
+
+            <div class="svg-top">
+
+                <svg width="492" height="65" viewBox="0 0 574 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="o-3" d="M1 1V57" stroke="#BCBCBC" stroke-width="3" />
+                    <path class="o-2" d="M574 1L1 1" stroke="#BCBCBC" stroke-width="3" />
+                </svg>
+
+                <svg width="490" height="112" viewBox="0 0 557 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="draw o-1" d="M1 0V56" stroke="#BCBCBC" stroke-width="3" />
+                    <path class="o-3" d="M556 56V112" stroke="#BCBCBC" stroke-width="3" />
+                    <path class="o-2" d="M556 56H1" stroke="#BCBCBC" stroke-width="3" />
+                </svg>
+
+            </div>
+
+
+            <div class="process-cards">
+                <div class="card" style="width: 14rem;">
+                    <div class="our-process-image1">
+
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Strategy
+                        </h3>
+                        <p>We Ideate and understand the product before we start building the solutions. </p>
+
+
+                    </div>
+                </div>
+                <div class="card" style="width: 14rem;">
+                    <div class="our-process-image2">
+
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Design
+                        </h3>
+                        <p>We pay attention to detail and create designs in sync with the
+                            user persona.</p>
+
+                    </div>
+                </div>
+                <div class="card" style="width: 14rem;">
+                    <div class="our-process-image3">
+
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Implement
+                        </h3>
+                        <p> Now, we start building ⚙️ and follow efficient workflows for best results. </p>
+
+                    </div>
+                </div>
+
+                <svg width="100" height="56" viewBox="0 0 100 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="o-6" d="M2 21H98L75.8195 5" stroke="#949494" />
+                    <path class="o-6" d="M98 33L2 33L24.1805 49" stroke="#949494" />
+                    <path class="evo"
+                        d="M4.268 5.764V8.212H7.148V9.328H4.268V11.884H7.508V13H2.9V4.648H7.508V5.764H4.268ZM11.629 11.776L13.501 6.388H14.953L12.433 13H10.801L8.29297 6.388H9.75697L11.629 11.776ZM18.735 13.108C18.111 13.108 17.547 12.968 17.043 12.688C16.539 12.4 16.143 12 15.855 11.488C15.567 10.968 15.423 10.368 15.423 9.688C15.423 9.016 15.571 8.42 15.867 7.9C16.163 7.38 16.567 6.98 17.079 6.7C17.591 6.42 18.163 6.28 18.795 6.28C19.427 6.28 19.999 6.42 20.511 6.7C21.023 6.98 21.427 7.38 21.723 7.9C22.019 8.42 22.167 9.016 22.167 9.688C22.167 10.36 22.015 10.956 21.711 11.476C21.407 11.996 20.991 12.4 20.463 12.688C19.943 12.968 19.367 13.108 18.735 13.108ZM18.735 11.92C19.087 11.92 19.415 11.836 19.719 11.668C20.031 11.5 20.283 11.248 20.475 10.912C20.667 10.576 20.763 10.168 20.763 9.688C20.763 9.208 20.671 8.804 20.487 8.476C20.303 8.14 20.059 7.888 19.755 7.72C19.451 7.552 19.123 7.468 18.771 7.468C18.419 7.468 18.091 7.552 17.787 7.72C17.491 7.888 17.255 8.14 17.079 8.476C16.903 8.804 16.815 9.208 16.815 9.688C16.815 10.4 16.995 10.952 17.355 11.344C17.723 11.728 18.183 11.92 18.735 11.92ZM24.7674 4.12V13H23.3994V4.12H24.7674ZM28.9994 11.776L30.8714 6.388H32.3234L29.8034 13H28.1714L25.6634 6.388H27.1274L28.9994 11.776ZM39.2975 9.532C39.2975 9.78 39.2815 10.004 39.2495 10.204H34.1975C34.2375 10.732 34.4335 11.156 34.7855 11.476C35.1375 11.796 35.5695 11.956 36.0815 11.956C36.8175 11.956 37.3375 11.648 37.6415 11.032H39.1175C38.9175 11.64 38.5535 12.14 38.0255 12.532C37.5055 12.916 36.8575 13.108 36.0815 13.108C35.4495 13.108 34.8815 12.968 34.3775 12.688C33.8815 12.4 33.4895 12 33.2015 11.488C32.9215 10.968 32.7815 10.368 32.7815 9.688C32.7815 9.008 32.9175 8.412 33.1895 7.9C33.4695 7.38 33.8575 6.98 34.3535 6.7C34.8575 6.42 35.4335 6.28 36.0815 6.28C36.7055 6.28 37.2615 6.416 37.7495 6.688C38.2375 6.96 38.6175 7.344 38.8895 7.84C39.1615 8.328 39.2975 8.892 39.2975 9.532ZM37.8695 9.1C37.8615 8.596 37.6815 8.192 37.3295 7.888C36.9775 7.584 36.5415 7.432 36.0215 7.432C35.5495 7.432 35.1455 7.584 34.8095 7.888C34.4735 8.184 34.2735 8.588 34.2095 9.1H37.8695Z"
+                        fill="#474747" />
+                    <path class="evo"
+                        d="M49.232 51L47.312 47.664H46.268V51H44.9V42.66H47.78C48.42 42.66 48.96 42.772 49.4 42.996C49.848 43.22 50.18 43.52 50.396 43.896C50.62 44.272 50.732 44.692 50.732 45.156C50.732 45.7 50.572 46.196 50.252 46.644C49.94 47.084 49.456 47.384 48.8 47.544L50.864 51H49.232ZM46.268 46.572H47.78C48.292 46.572 48.676 46.444 48.932 46.188C49.196 45.932 49.328 45.588 49.328 45.156C49.328 44.724 49.2 44.388 48.944 44.148C48.688 43.9 48.3 43.776 47.78 43.776H46.268V46.572ZM58.422 47.532C58.422 47.78 58.406 48.004 58.374 48.204H53.322C53.362 48.732 53.558 49.156 53.91 49.476C54.262 49.796 54.694 49.956 55.206 49.956C55.942 49.956 56.462 49.648 56.766 49.032H58.242C58.042 49.64 57.678 50.14 57.15 50.532C56.63 50.916 55.982 51.108 55.206 51.108C54.574 51.108 54.006 50.968 53.502 50.688C53.006 50.4 52.614 50 52.326 49.488C52.046 48.968 51.906 48.368 51.906 47.688C51.906 47.008 52.042 46.412 52.314 45.9C52.594 45.38 52.982 44.98 53.478 44.7C53.982 44.42 54.558 44.28 55.206 44.28C55.83 44.28 56.386 44.416 56.874 44.688C57.362 44.96 57.742 45.344 58.014 45.84C58.286 46.328 58.422 46.892 58.422 47.532ZM56.994 47.1C56.986 46.596 56.806 46.192 56.454 45.888C56.102 45.584 55.666 45.432 55.146 45.432C54.674 45.432 54.27 45.584 53.934 45.888C53.598 46.184 53.398 46.588 53.334 47.1H56.994ZM60.3443 43.512C60.0963 43.512 59.8883 43.428 59.7203 43.26C59.5523 43.092 59.4683 42.884 59.4683 42.636C59.4683 42.388 59.5523 42.18 59.7203 42.012C59.8883 41.844 60.0963 41.76 60.3443 41.76C60.5843 41.76 60.7883 41.844 60.9563 42.012C61.1243 42.18 61.2083 42.388 61.2083 42.636C61.2083 42.884 61.1243 43.092 60.9563 43.26C60.7883 43.428 60.5843 43.512 60.3443 43.512ZM61.0163 44.388V51H59.6483V44.388H61.0163ZM64.2883 45.504V49.164C64.2883 49.412 64.3443 49.592 64.4563 49.704C64.5763 49.808 64.7763 49.86 65.0563 49.86H65.8963V51H64.8163C64.2003 51 63.7283 50.856 63.4003 50.568C63.0723 50.28 62.9083 49.812 62.9083 49.164V45.504H62.1283V44.388H62.9083V42.744H64.2883V44.388H65.8963V45.504H64.2883ZM73.0972 47.532C73.0972 47.78 73.0812 48.004 73.0492 48.204H67.9972C68.0372 48.732 68.2332 49.156 68.5852 49.476C68.9372 49.796 69.3692 49.956 69.8812 49.956C70.6172 49.956 71.1372 49.648 71.4412 49.032H72.9172C72.7172 49.64 72.3532 50.14 71.8252 50.532C71.3052 50.916 70.6572 51.108 69.8812 51.108C69.2492 51.108 68.6812 50.968 68.1772 50.688C67.6812 50.4 67.2892 50 67.0012 49.488C66.7212 48.968 66.5812 48.368 66.5812 47.688C66.5812 47.008 66.7172 46.412 66.9892 45.9C67.2692 45.38 67.6572 44.98 68.1532 44.7C68.6572 44.42 69.2332 44.28 69.8812 44.28C70.5052 44.28 71.0612 44.416 71.5492 44.688C72.0372 44.96 72.4172 45.344 72.6892 45.84C72.9612 46.328 73.0972 46.892 73.0972 47.532ZM71.6692 47.1C71.6612 46.596 71.4812 46.192 71.1292 45.888C70.7772 45.584 70.3412 45.432 69.8212 45.432C69.3492 45.432 68.9452 45.584 68.6092 45.888C68.2732 46.184 68.0732 46.588 68.0092 47.1H71.6692ZM75.6914 45.348C75.8914 45.012 76.1554 44.752 76.4834 44.568C76.8194 44.376 77.2154 44.28 77.6714 44.28V45.696H77.3234C76.7874 45.696 76.3794 45.832 76.0994 46.104C75.8274 46.376 75.6914 46.848 75.6914 47.52V51H74.3234V44.388H75.6914V45.348ZM78.3529 47.664C78.3529 47 78.4889 46.412 78.7609 45.9C79.0409 45.388 79.4169 44.992 79.8889 44.712C80.3689 44.424 80.8969 44.28 81.4729 44.28C81.9929 44.28 82.4449 44.384 82.8289 44.592C83.2209 44.792 83.5329 45.044 83.7649 45.348V44.388H85.1449V51H83.7649V50.016C83.5329 50.328 83.2169 50.588 82.8169 50.796C82.4169 51.004 81.9609 51.108 81.4489 51.108C80.8809 51.108 80.3609 50.964 79.8889 50.676C79.4169 50.38 79.0409 49.972 78.7609 49.452C78.4889 48.924 78.3529 48.328 78.3529 47.664ZM83.7649 47.688C83.7649 47.232 83.6689 46.836 83.4769 46.5C83.2929 46.164 83.0489 45.908 82.7449 45.732C82.4409 45.556 82.1129 45.468 81.7609 45.468C81.4089 45.468 81.0809 45.556 80.7769 45.732C80.4729 45.9 80.2249 46.152 80.0329 46.488C79.8489 46.816 79.7569 47.208 79.7569 47.664C79.7569 48.12 79.8489 48.52 80.0329 48.864C80.2249 49.208 80.4729 49.472 80.7769 49.656C81.0889 49.832 81.4169 49.92 81.7609 49.92C82.1129 49.92 82.4409 49.832 82.7449 49.656C83.0489 49.48 83.2929 49.224 83.4769 48.888C83.6689 48.544 83.7649 48.144 83.7649 47.688ZM88.4177 45.504V49.164C88.4177 49.412 88.4737 49.592 88.5857 49.704C88.7057 49.808 88.9057 49.86 89.1857 49.86H90.0257V51H88.9457C88.3297 51 87.8577 50.856 87.5297 50.568C87.2017 50.28 87.0377 49.812 87.0377 49.164V45.504H86.2577V44.388H87.0377V42.744H88.4177V44.388H90.0257V45.504H88.4177ZM97.2266 47.532C97.2266 47.78 97.2106 48.004 97.1786 48.204H92.1266C92.1666 48.732 92.3626 49.156 92.7146 49.476C93.0666 49.796 93.4986 49.956 94.0106 49.956C94.7466 49.956 95.2666 49.648 95.5706 49.032H97.0466C96.8466 49.64 96.4826 50.14 95.9546 50.532C95.4346 50.916 94.7866 51.108 94.0106 51.108C93.3786 51.108 92.8106 50.968 92.3066 50.688C91.8106 50.4 91.4186 50 91.1306 49.488C90.8506 48.968 90.7106 48.368 90.7106 47.688C90.7106 47.008 90.8466 46.412 91.1186 45.9C91.3986 45.38 91.7866 44.98 92.2826 44.7C92.7866 44.42 93.3626 44.28 94.0106 44.28C94.6346 44.28 95.1906 44.416 95.6786 44.688C96.1666 44.96 96.5466 45.344 96.8186 45.84C97.0906 46.328 97.2266 46.892 97.2266 47.532ZM95.7986 47.1C95.7906 46.596 95.6106 46.192 95.2586 45.888C94.9066 45.584 94.4706 45.432 93.9506 45.432C93.4786 45.432 93.0746 45.584 92.7386 45.888C92.4026 46.184 92.2026 46.588 92.1386 47.1H95.7986Z"
+                        fill="#474747" />
+                </svg>
+
+
+                <div class="card" id="feedback" style="width: 14rem;">
+                    <div class="our-process-image4">
+
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Feedback
+                        </h3>
+                        <p> We strive for perfection and keep on reiterating till we achieve that. </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="svg-bottom">
+
+                <svg width="495" height="70" viewBox="0 0 565 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="o-4" d="M1 56L1 -1.37091e-06" stroke="#BCBCBC" stroke-width="3" />
+                    <path class="o-5" d="M1.00001 55L565 55" stroke="#BCBCBC" stroke-width="3" />
+                </svg>
+
+                <svg width="495" height="70" viewBox="0 0 574 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="o-4" d="M572.032 56V-1.37091e-06" stroke="#BCBCBC" stroke-width="3" />
+                    <path class="o-5" d="M6.73532e-06 56L573 56" stroke="#BCBCBC" stroke-width="3" />
+                </svg>
+
+
+            </div>
+
+
+        </div>
+    </section>
+    <!-- /////////////////////////////// SKILLS //////////////////////////// -->
+
+    <section id="skills">
+
+
+        <div class="skills-heading">
+            <h1>
+                What do we use to
+                bring ideas to life
+            </h1>
+
+        </div>
+
+        <div class="skills-content">
+
+            <div class="skills-cards">
+                <div class="card" style="width: 20rem;">
+                    <div class="backend-img"></div>
+                    <div class="card-body">
+                        <h3 class="card-title">Backend
+                        </h3>
+                        <ul>
+                            <li>Django</li>
+                            <li> Docker</li>
+                            <li> NodeJS</li>
+                            <li>MOngoDB</li>
+                            <li>SQL</li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="card" style="width: 20rem;">
+                    <div class="frontend-img"></div>
+                    <div class="card-body">
+                        <h3 class="card-title">Frontend
+                        </h3>
+
+                        <ul>
+                            <li> Bootstrap</li>
+                            <li> Javascript</li>
+                            <li> CSS</li>
+                            <li>Vue</li>
+                            <li>React</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card" style="width: 20rem;">
+                    <div class="graphic-img"></div>
+                    <div class="card-body">
+                        <h3 class="card-title">Graphics
+                        </h3>
+
+
+                        <ul>
+                            <li>Figma</li>
+                            <li> Procreate</li>
+                            <li>AdobeXD</li>
+                            <li>Blender</li>
+                            <li>Photoshop</li>
+                        </ul>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- /////////////////////////////// FOOTER //////////////////////////// -->
+
+
+    <footer>
+
+        <div class="logo-footer">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <img src="{% static 'img/logo.png' %}" alt="" width="50" height="50"
+                    class="d-inline-block align-text-top flogo">
+                Commit
+            </a>
+            <p>
+                We build beautiful experiences
+                and humane designs for your
+                robust online presence
+            </p>
+        </div>
+
+        <div id="footer">
+            <div class="footer-links">
+                <a class="nav-item" href="{% url 'work' %}">Work</a>
+                <a class="nav-item" href="{% url 'home' %}">Home</a>
+                <a class="nav-item" href="{% url 'process' %}">Process</a>
+                <a class="nav-item" href="{% url 'about' %}">About</a>
+                <a class="nav-item" href="{% url 'contact' %}">Contact</a>
+            </div>
+
+            <div class="contact-footer">
+                +91 8872711250
+                <p>
+                    contact@commit.net.in
+                </p>
+                <a href="https://github.com/Commit-Inc" target="_blank" id="gh"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/company/commit-incorp" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="https://twitter.com/CommitInc" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/commitinc/" target="_blank" id="insta"><i
+                        class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="email-footer">
+            <p>Drop Your Email</p>
+            <form action="" class="email-form" method="POST">
+                {% csrf_token %}
+                <button type="submit" class="email-button btn btn-dark btn-md"> <i class="fas fa-arrow-right"></i>
+                </button>
+                <input type="text" placeholder="Your Email" name="email-enter">
+            </form>
+            <p class="copyright">
+                © Commit Inc. 2021
+            </p>
+        </div>
+
+
+    </footer>
+
+    <script>
+        AOS.init();
+    </script>
+    <script src="{% static 'js/process-script.js' %}"></script>
+</body>
+
+</html>

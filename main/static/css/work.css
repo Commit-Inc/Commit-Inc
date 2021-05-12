@@ -1,0 +1,106 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.project-section {
+  border: 1px solid gray;
+  border-radius: 20px;
+}
+
+#work {
+  padding: 0 5%;
+}
+
+.card-img-top {
+  border-radius: 20px;
+}
+
+.card {
+  width: unset !important;
+  text-align: center;
+  margin: 1rem 0;
+  height: unset !important;
+  border-radius: 20px;
+  background: white;
+  box-shadow: unset !important;
+}
+
+h3 {
+  margin: 1% 0 1% !important;
+  font-size: 2rem !important;
+}
+
+h1 {
+  margin: 5% 0 2%;
+  letter-spacing: unset !important;
+  font-size: 7rem;
+  font-weight: 900 !important;
+}
+
+p {
+  font-size: 1rem !important;
+}
+
+.work-card {
+  transition: all 0.5s linear;
+  border-radius: 20px;
+}
+
+.work-container a:hover {
+  text-decoration: none;
+}
+
+.work-row {
+  margin-top: 0;
+}
+
+.work-card:hover {
+  box-shadow:
+    0 5.9px 10.2px rgba(0, 0, 0, 0.02),
+    0 19.7px 34.4px rgba(0, 0, 0, 0.03),
+    0 88px 154px rgba(0, 0, 0, 0.05);
+  transform: translateY(-10px) scale(1.02);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* /////////////////////////// JUGAAD ////////////////////////////// */
+
+.contact-footer a {
+  margin: 0 7.5%;
+  color: rgb(69, 69, 69);
+}
+
+#gh {
+  margin-left: 0;
+}
+
+footer .nav-item {
+  font-weight: 500;
+}
+
+.contact-footer,
+.contact-footer p {
+  font-weight: 500;
+}
+
+.logo-footer p {
+  font-weight: 500;
+}
