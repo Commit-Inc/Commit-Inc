@@ -359,7 +359,7 @@
         </div>
         <div class="email-footer">
             <p>Drop Your Email</p>
-            <form action="" class="email-form" method="POST">
+            <form action="{% url 'home' %}" class="email-form" method="POST">
                 {% csrf_token %}
                 <button type="submit" class="email-button btn btn-dark btn-md"> <i class="fas fa-arrow-right"></i>
                 </button>

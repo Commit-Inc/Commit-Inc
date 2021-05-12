@@ -20,14 +20,14 @@ def home(request):
         drop_email = DropYourEmail(droppedEmail=email)
         drop_email.save()
 
-        sg = sendgrid.SendGridAPIClient(api_key=keyconfig.SENSENDGRID_API_KEY)
-        to_emails = email
-        from_email = Email(keyconfig.FROM_EMAIL)
-        subject = "Welcome right?"
-        html_content = "<strong>hey</strong>"
-        mail = Mail(from_email, to_emails, subject, html_content)
-        response = sg.send(mail)
-        print(response)
+        # sg = sendgrid.SendGridAPIClient(api_key=keyconfig.SENSENDGRID_API_KEY)
+        # to_emails = email
+        # from_email = Email(keyconfig.FROM_EMAIL)
+        # subject = "Welcome right?"
+        # html_content = "<strong>hey</strong>"
+        # mail = Mail(from_email, to_emails, subject, html_content)
+        # response = sg.send(mail)
+        # print(response)
 
         return render(request, "main/home.html", {"email": email})
     else:
@@ -63,18 +63,18 @@ def contact(request):
             phone=phone,
             company=company,
             message=extra,
-            requirements=requirements,
+            requirements = requirements
         )
         client.save()
 
-        sg = sendgrid.SendGridAPIClient(api_key=keyconfig.SENSENDGRID_API_KEY)
-        to_emails = email
-        from_email = Email(keyconfig.FROM_EMAIL)
-        subject = "Welcome right?" 
-        html_content = "<strong>hey</strong>" 
-        mail = Mail(from_email, to_emails, subject, html_content)
-        response = sg.send(mail)
-        print(response)
+        # sg = sendgrid.SendGridAPIClient(api_key=keyconfig.SENSENDGRID_API_KEY)
+        # to_emails = email
+        # from_email = Email(keyconfig.FROM_EMAIL)
+        # subject = "Welcome right?" 
+        # html_content = "<strong>hey</strong>" 
+        # mail = Mail(from_email, to_emails, subject, html_content)
+        # response = sg.send(mail)
+        # print(response)
 
         return render(request, "main/contact.html", {})
     else:
@@ -99,7 +99,6 @@ def getData(request):
             "Email",
             "Phone",
             "Company",
-            "Requirements",
             "Message",
         ]
     ]
@@ -111,7 +110,6 @@ def getData(request):
             client.email,
             client.phone,
             client.company,
-            client.requirements,
             client.message,
         ]
         row_data.append(row)

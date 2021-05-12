@@ -4,16 +4,16 @@ from django.db import models
 
 
 class Client(models.Model):
-    fName = models.CharField(max_length=34)
-    lName = models.CharField(max_length=35)
+    fName = models.CharField(max_length=199)
+    lName = models.CharField(max_length=199)
     email = models.EmailField()
-    phone = models.CharField(max_length=14)
-    company = models.CharField(max_length=50)
+    phone = models.CharField(max_length=199)
+    company = models.CharField(max_length=199)
     requirements = models.CharField(max_length=199)
     message = models.TextField()
 
     def __str__(self):
-        return "{}-{}-{}-{}-{}".format(self.fName, self.email, self.phone, self.message, self.requirements)
+        return "{}-{}-{}-{}".format(self.fName, self.email, self.phone, self.message)
 
 
 class DropYourEmail(models.Model):
