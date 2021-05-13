@@ -21,7 +21,7 @@ def home(request):
             message = Mail(
                 from_email=Email('"Commit" <commit.net.in@gmail.com>'),
                 to_emails=str(email),
-                subject='TEsting mail',
+                subject='Greetings from Commit 👋',
                 html_content= render_to_string("main/email.html"))
             try:
                 sg = SendGridAPIClient(api_key=keyconfig.SENSENDGRID_API_KEY)
@@ -76,7 +76,7 @@ def contact(request):
             message = Mail(
                 from_email='commit.net.in@gmail.com',
                 to_emails=str(email),
-                subject='TEsting mail',
+                subject='Greetings from Commit 👋',
                 html_content= render_to_string("main/email.html"))
             try:
                 sg = SendGridAPIClient(api_key=keyconfig.SENSENDGRID_API_KEY)
