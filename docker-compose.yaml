@@ -23,16 +23,20 @@ services:
     depends_on:
       - db
     volumes:
-      - staticfiles:/home/app/web/staticfiles
+      - staticfiles:/home/app/web/staticfile
+      - ./:/var/www/
   nginx:
     container_name: nginx
-    image: nginx:mainline-alpine
+    build: 
+      context: ./nginx
+      dockerfile: Dockerfile
     restart: always
     ports:
       - "80:80"
     volumes:
-      - ./nginx:/etc/nginx/conf.d
+      #- ./nginx:/etc/nginx/conf.d
       - staticfiles:/home/app/web/staticfiles/
+      - ./nginx/nginx.conf:/etc/nginx/sites-available/default
     depends_on:
       - web
 
