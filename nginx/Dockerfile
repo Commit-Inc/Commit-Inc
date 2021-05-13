@@ -4,6 +4,7 @@
 # COPY nginx.conf /etc/nginx/conf.d
 
 FROM ubuntu:18.04
+#FROM nginx:1.17.4-alpine
 
 RUN apt update -y \
     && apt install nginx curl vim -y \
