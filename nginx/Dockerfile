@@ -1,10 +1,24 @@
-FROM nginx:1.17.4-alpine
+# FROM nginx:1.17.4-alpine
 
-RUN apk add python3 python3-dev py3-pip build-base libressl-dev musl-dev libffi-dev
-RUN pip3 install pip --upgrade
-RUN pip3 install certbot-nginx
-RUN mkdir /etc/letsencrypt
+# RUN rm /etc/nginx/conf.d/default.conf
+# COPY nginx.conf /etc/nginx/conf.d
 
+FROM ubuntu:18.04
 
-RUN rm /etc/nginx/conf.d/default.conf
-COPY nginx.conf /etc/nginx/conf.d
+RUN apt update -y \
+    && apt install nginx curl vim -y \
+    && apt-get install software-properties-common -y \
+    && add-apt-repository ppa:certbot/certbot -y \
+    && apt-get update -y \
+    && apt-get install python-certbot-nginx -y \
+    && apt-get clean \
+
+EXPOSE 80
+
+STOPSIGNAL SIGTERM
+
+# RUN rm /etc/nginx/conf.d/default.conf
+# COPY nginx.conf /etc/nginx/conf.d
+
+CMD ["nginx", "-g", "daemon off;"]
+
