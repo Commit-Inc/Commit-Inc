@@ -13,7 +13,7 @@ class Client(models.Model):
     message = models.TextField()
 
     def __str__(self):
-        return "{}-{}-{}-{}".format(self.fName, self.email, self.phone, self.message)
+        return "{}||{}||{}||{}".format(self.fName, self.email, self.phone, self.message)
 
 
 class DropYourEmail(models.Model):

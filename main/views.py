@@ -1,13 +1,12 @@
+from os import pread
 from django.shortcuts import render, redirect
-# from django.contrib import messages
-# from django.contrib.auth.decorators import login_required
-# from django.http import HttpResponse, JsonResponse
-# import os
+from django.contrib import messages
+from django.http import HttpResponse, JsonResponse, response
 from django.contrib.auth.decorators import login_required
 from .models import Client, DropYourEmail
 from django.contrib.auth.decorators import login_required, permission_required
 import openpyxl
-import sendgrid
+from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail, Email, To, Content
 from commit import keyconfig
 
@@ -20,15 +19,22 @@ def home(request):
         drop_email = DropYourEmail(droppedEmail=email)
         drop_email.save()
 
-        # sg = sendgrid.SendGridAPIClient(api_key=keyconfig.SENSENDGRID_API_KEY)
-        # to_emails = email
-        # from_email = Email(keyconfig.FROM_EMAIL)
-        # subject = "Welcome right?"
-        # html_content = "<strong>hey</strong>"
-        # mail = Mail(from_email, to_emails, subject, html_content)
-        # response = sg.send(mail)
-        # print(response)
-
+        if email:
+            message = Mail(
+                from_email='commit.net.in@gmail.com',
+                to_emails=str(email),
+                subject='TEsting mail',
+                html_content='<strong>hey</strong>')
+            try:
+                sg = SendGridAPIClient(api_key=keyconfig.SENSENDGRID_API_KEY)
+                response = sg.send(message)
+                print(response.status_code)
+                print(response.body)
+                print(response.headers)
+            except Exception as e:
+                print(e.message)
+        else:
+            return redirect('home')                
         return render(request, "main/home.html", {"email": email})
     else:
         return render(request, "main/home.html", {})
@@ -66,26 +72,32 @@ def contact(request):
             requirements = requirements
         )
         client.save()
-
-        # sg = sendgrid.SendGridAPIClient(api_key=keyconfig.SENSENDGRID_API_KEY)
-        # to_emails = email
-        # from_email = Email(keyconfig.FROM_EMAIL)
-        # subject = "Welcome right?" 
-        # html_content = "<strong>hey</strong>" 
-        # mail = Mail(from_email, to_emails, subject, html_content)
-        # response = sg.send(mail)
-        # print(response)
-
+        if email:
+            message = Mail(
+                from_email='commit.net.in@gmail.com',
+                to_emails=str(email),
+                subject='TEsting mail',
+                html_content='<strong>hey</strong>')
+            try:
+                sg = SendGridAPIClient(api_key=keyconfig.SENSENDGRID_API_KEY)
+                response = sg.send(message)
+                print(response.status_code)
+                print(response.body)
+                print(response.headers)
+            except Exception as e:
+                print(e.message)
+        else:
+            return redirect('home')           
         return render(request, "main/contact.html", {})
     else:
         return render(request, "main/contact.html", {})
     return render(request, "main/contact.html", {})
 
 
-@permission_required("GET") #or @permission_required("admin.can_add_log_entry")
+@permission_required("GET")
 def getData(request):
     response = HttpResponse(content_type="application/ms-excel")
-    response["Content-Disposition"] = 'attachment; filename="profile_data.xlsx"'
+    response["Content-Disposition"] = 'attachment; filename="ClientData.xlsx"'
 
     wb = openpyxl.Workbook()
     ws = wb.active
@@ -100,6 +112,7 @@ def getData(request):
             "Phone",
             "Company",
             "Message",
+            "Requirements"
         ]
     ]
     for client in clients:
@@ -107,10 +120,10 @@ def getData(request):
             client.fName,
             client.lName,
             client.email,
-            client.email,
             client.phone,
             client.company,
             client.message,
+            client.requirements
         ]
         row_data.append(row)
 
@@ -120,14 +133,3 @@ def getData(request):
     wb.save(response)
     return response
  
-
- #if the above mail client does not work, use
-#  def send_email(html_message, subject, to_email):
-#     from_email = Email('"Commit" <commit.net.in@gmail.com>')
-#     content = Content("text/html", html_message)
-#     mail = Mail(from_email, subject, to_email, content)
-#     sg = sendgrid.SendGridAPIClient(apikey=settings.SENDGRID_API_KEY)
-#     response = sg.client.mail.send.post(request_body=mail.get())
-#     _print("SendGrid mail")
-
-# where html_message = html message?

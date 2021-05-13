@@ -1,7 +1,7 @@
 import os
 
 SENSENDGRID_API_KEY = (
-    "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"
+    "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"
 )
 FROM_EMAIL = "commit.net.in@gmail.com"
 
