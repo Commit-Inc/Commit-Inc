@@ -12,13 +12,9 @@ RUN apt update -y \
     && apt-get update -y \
     && apt-get install python-certbot-nginx -y \
     && apt-get clean \
-
 EXPOSE 80
 
 STOPSIGNAL SIGTERM
-
-# RUN rm /etc/nginx/conf.d/default.conf
-# COPY nginx.conf /etc/nginx/conf.d
 
 CMD ["nginx", "-g", "daemon off;"]
 
