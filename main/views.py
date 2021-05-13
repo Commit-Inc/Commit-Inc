@@ -29,10 +29,10 @@ def home(request):
                 print(response.status_code)
                 print(response.body)
                 print(response.headers)
-                messages.success(request,f"Thanks haha for your email xD")
+                messages.success(request,f'''Thanks for reaching out! We'll get back to you soon.''')
             except Exception as e:
                 print(e.message)
-                messages.error(request, f"something went wrong ://")
+                messages.error(request, f"Looks like something went wrong...Try again in some time!")
         else:
             return redirect('home')                
         return render(request, "main/home.html", {"email": email})
@@ -84,11 +84,11 @@ def contact(request):
                 print(response.status_code)
                 print(response.body)
                 print(response.headers)
-                messages.success(request,f"Thanks haha for your email xD")
+                messages.success(request,f'''Thanks for reaching out! We'll get back to you soon.''')
                 return redirect('home')
             except Exception as e:
                 print(e.message)
-                messages.error(request, f"something went wrong ://")
+                messages.error(request, f"Looks like something went wrong...Try again in some time!")
                 return redirect('home')
         else:
             return redirect('contact')          
