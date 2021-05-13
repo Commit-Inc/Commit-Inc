@@ -19,7 +19,7 @@ def home(request):
 
         if email:
             message = Mail(
-                from_email='commit.net.in@gmail.com',
+                from_email=Email('"Commit" <commit.net.in@gmail.com>'),
                 to_emails=str(email),
                 subject='TEsting mail',
                 html_content= render_to_string("main/email.html"))
@@ -29,8 +29,10 @@ def home(request):
                 print(response.status_code)
                 print(response.body)
                 print(response.headers)
+                messages.success(request,f"Thanks haha for your email xD")
             except Exception as e:
                 print(e.message)
+                messages.error(request, f"something went wrong ://")
         else:
             return redirect('home')                
         return render(request, "main/home.html", {"email": email})
@@ -75,17 +77,21 @@ def contact(request):
                 from_email='commit.net.in@gmail.com',
                 to_emails=str(email),
                 subject='TEsting mail',
-                html_content='<strong>hey</strong>')
+                html_content= render_to_string("main/email.html"))
             try:
                 sg = SendGridAPIClient(api_key=keyconfig.SENSENDGRID_API_KEY)
                 response = sg.send(message)
                 print(response.status_code)
                 print(response.body)
                 print(response.headers)
+                messages.success(request,f"Thanks haha for your email xD")
+                return redirect('home')
             except Exception as e:
                 print(e.message)
+                messages.error(request, f"something went wrong ://")
+                return redirect('home')
         else:
-            return redirect('home')           
+            return redirect('contact')          
         return render(request, "main/contact.html", {})
     else:
         return render(request, "main/contact.html", {})
