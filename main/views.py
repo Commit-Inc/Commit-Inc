@@ -1,16 +1,14 @@
-from os import pread
+
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from django.http import HttpResponse, JsonResponse, response
-from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
 from .models import Client, DropYourEmail
 from django.contrib.auth.decorators import login_required, permission_required
 import openpyxl
+from django.template.loader import render_to_string
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail, Email, To, Content
 from commit import keyconfig
-
-# makemigrations and stuff later?
 
 
 def home(request):
@@ -24,7 +22,7 @@ def home(request):
                 from_email='commit.net.in@gmail.com',
                 to_emails=str(email),
                 subject='TEsting mail',
-                html_content='<strong>hey</strong>')
+                html_content= render_to_string("main/email.html"))
             try:
                 sg = SendGridAPIClient(api_key=keyconfig.SENSENDGRID_API_KEY)
                 response = sg.send(message)
