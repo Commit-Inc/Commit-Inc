@@ -32,8 +32,8 @@ ALLOWED_HOSTS = [
     "0.0.0.0",
     "localhost",
     "127.0.0.1",
-    Secrets.HOST_DOMAIN,
-    Secrets.HOST_IP,
+    "139.59.62.65",
+    "commit.net.in",
 ]
 
 
