@@ -1,275 +1,241 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Commit Inc.</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous" />
 
-    <!-- bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commit Inc.</title>
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css"
+    integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous" />
 
-    <!-- bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
 
-    <!-- FONT AWESOME -->
-    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous" ></script>
+  <!-- bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
 
-    <!-- CUSTOM STYLESHEET -->
-    <link rel="icon" href="{% static "img/favicon.ico" %}">
-    <link rel="stylesheet" href="{% static "css/home.css" %}"> 
-    <link rel="stylesheet" href="{% static "css/footer.css" %}"> 
-    <link rel="stylesheet" href="{% static "css/navbar.css" %}"> 
-    <link rel="stylesheet" href="{% static "css/about.css" %}">
-  </head>
+  <!-- FONT AWESOME -->
+  <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 
-  <body>
-    <!-- ///////////////////////////// NAVBAR /////////////////////////// -->
+  <!-- CUSTOM STYLESHEET -->
+  <link rel="icon" href="{% static "img/favicon.ico" %}">
+  <link rel="stylesheet" href="{% static "css/home.css" %}">
+  <link rel="stylesheet" href="{% static "css/footer.css" %}">
+  <link rel="stylesheet" href="{% static "css/navbar.css" %}">
+  <link rel="stylesheet" href="{% static "css/about.css" %}">
+</head>
 
-    <nav class="navbar navbar-expand-lg">
+<body>
+  <!-- ///////////////////////////// NAVBAR /////////////////////////// -->
+
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="{% url 'home' %}">
+      <img src="{% static "img/logo.png" %}" alt="" width="50" height="50" class="d-inline-block align-text-top"> Commit
+    </a>
+    <button class="navbar-toggler second-button collapsed" type="button" data-toggle="collapse"
+      data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+      aria-label="Toggle navigation" id="hamb">
+      <div class="animated-icon2">
+        <span></span><span></span><span></span><span></span>
+      </div>
+    </button>
+    <div class="collapse navbar-collapse lateral-left" id="navbarNavAltMarkup">
+      <div class="navbar-nav ml-auto" id="navlist">
+        <a class="nav-item nav-link active" href="{% url 'about' %}">About <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="{% url 'work' %}">Work</a>
+        <a class="nav-item nav-link" href="{% url 'process' %}">Process</a>
+        <a class="nav-item nav-link" href="{% url 'contact' %}">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!--///////////////////////////// HERO SECTION /////////////////////////////-->
+
+  <section id="hero">
+    <div class="row title-row hero-row">
+      <div class="col-lg-6 hero-info">
+        <h1 class="big-heading">Who are we?</h1>
+
+        <div class="card who-we-card" style="width: 30rem">
+          <div class="curious"></div>
+          <div class="card-body curious-card-body">
+            <p class="card-text">
+              We are a team of diverse set of people who are passionate about
+              bringing ideas to life.
+            </p>
+          </div>
+        </div>
+
+        <div class="card who-we-card bottom-who-we" style="width: 30rem">
+          <div class="card-body git-card-body">
+            <p class="card-text">
+              The ideology of contributing and building something meaningful
+              is what we believe in
+            </p>
+          </div>
+          <div class="git-who"></div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 illustration-parent">
+        <!-- <img src="./assets/images/hero.png" alt="iphone-mockup" class="illustration"> -->
+      </div>
+    </div>
+  </section>
+
+  <!--///////////////////////////// TEAM PAGE //////////////////////////////-->
+
+  <section id="team">
+    <div class="team-heading">
+      <h1>Team</h1>
+      <p>
+        $ git commit -m '
+        <span id="sentence" class="sentence"></span>
+        <span class="input-cursor"></span>
+      </p>
+    </div>
+
+    <div class="team-content">
+      <div class="team-cards">
+        <div class="card" style="width: 20rem">
+          <div class="saksham-image"></div>
+          <div class="card-body about-body">
+            <h3 class="card-title">Saksham Aggarwal</h3>
+            <p>Frontend Developer and UI/UX Designer</p>
+            <ul>
+              <li>
+                <a href="https://github.com/SakshamDevelops">
+                  <i class="fab fa-github"></i></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/sakshamagg27">
+                  <i class="fab fa-linkedin-in"></i></a>
+              </li>
+              <li>
+                <a href="https://instagram.com/sakshamaggarwal27"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/sakshamagg106"><i class="fab fa-twitter"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card" style="width: 20rem">
+          <div class="sarthak-image"></div>
+          <div class="card-body about-body">
+            <h3 class="card-title">Sarthak Arora</h3>
+            <p>Frontend Developer and Motion Graphic Artist</p>
+
+            <ul>
+              <li>
+                <a href="https://github.com/sarthakeash">
+                  <i class="fab fa-github"></i></a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/sarthak-arora-aa92b9201 ">
+                  <i class="fab fa-linkedin-in"></i></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/sar__aura/"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/Sarthak_inSane"><i class="fab fa-twitter"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card" style="width: 20rem">
+          <div class="aditya-image"></div>
+          <div class="card-body about-body">
+            <h3 class="card-title">Aditya Thakur</h3>
+            <p>Backend Developer and Systems Engineer</p>
+
+            <ul>
+              <li>
+                <a href="https://github.com/cry0genic">
+                  <i class="fab fa-github"></i></a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/aditya11-thakur">
+                  <i class="fab fa-linkedin-in"></i></a>
+              </li>
+              <li>
+                <a href="https://instagram.com/aditya_11_"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/cry0genic11"><i class="fab fa-twitter"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--///////////////////////////// FOOTER /////////////////////////////////-->
+
+  <footer>
+    <div class="logo-footer">
       <a class="navbar-brand" href="{% url 'home' %}">
-        <img src="{% static "img/logo.png" %}" alt="" width="50" height="50"
-        class="d-inline-block align-text-top"> Commit
+        <img src="{% static 'img/logo.png' %}" alt="" width="50" height="50"
+          class="d-inline-block align-text-top flogo" />
+        Commit
       </a>
-      <button
-        class="navbar-toggler second-button collapsed"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-        id="hamb"
-      >
-        <div class="animated-icon2">
-          <span></span><span></span><span></span><span></span>
-        </div>
-      </button>
-      <div
-        class="collapse navbar-collapse lateral-left"
-        id="navbarNavAltMarkup"
-      >
-        <div class="navbar-nav ml-auto" id="navlist">
-          <a class="nav-item nav-link active" href="{% url 'about' %}">About <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="{% url 'work' %}">Work</a>
-          <a class="nav-item nav-link" href="{% url 'process' %}">Process</a>
-          <a class="nav-item nav-link" href="{% url 'contact' %}">Contact</a>
-        </div>
-      </div>
-    </nav> 
+      <p>
+        We build beautiful experiences and humane designs for your robust
+        online presence
+      </p>
+    </div>
 
-    <!--///////////////////////////// HERO SECTION /////////////////////////////-->
-
-    <section id="hero">
-      <div class="row title-row hero-row">
-        <div class="col-lg-6 hero-info">
-          <h1 class="big-heading">Who are we?</h1>
-
-          <div class="card who-we-card" style="width: 30rem">
-            <div class="curious"></div>
-            <div class="card-body curious-card-body">
-              <p class="card-text">
-                We are a team of diverse set of people who are passionate about
-                bringing ideas to life.
-              </p>
-            </div>
-          </div>
-
-          <div class="card who-we-card bottom-who-we" style="width: 30rem">
-            <div class="card-body git-card-body">
-              <p class="card-text">
-                The ideology of contributing and building something meaningful
-                is what we believe in
-              </p>
-            </div>
-            <div class="git-who"></div>
-          </div>
-        </div>
-
-        <div class="col-lg-6 illustration-parent">
-          <!-- <img src="./assets/images/hero.png" alt="iphone-mockup" class="illustration"> -->
-        </div>
-      </div>
-    </section>
-
-    <!--///////////////////////////// TEAM PAGE //////////////////////////////-->
-
-    <section id="team">
-      <div class="team-heading">
-        <h1>Team</h1>
-        <p>
-          $ git commit -m '
-          <span id="sentence" class="sentence"></span>
-          <span class="input-cursor"></span>
-        </p>
+    <div id="footer">
+      <div class="footer-links">
+        <a class="nav-item" href="{% url 'work' %}">Work</a>
+        <a class="nav-item" href="{% url 'home' %}">Home</a>
+        <a class="nav-item" href="{% url 'process' %}">Process</a>
+        <a class="nav-item" href="{% url 'about' %}">About</a>
+        <a class="nav-item" href="{% url 'contact' %}">Contact</a>
       </div>
 
-      <div class="team-content">
-        <div class="team-cards">
-          <div class="card" style="width: 20rem">
-            <div class="saksham-image"></div>
-            <div class="card-body about-body">
-              <h3 class="card-title">Saksham Aggarwal</h3>
-              <p>Frontend Developer and UI/UX Designer</p>
-              <ul>
-                <li>
-                  <a href="https://github.com/SakshamDevelops">
-                    <i class="fab fa-github"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="https://www.linkedin.com/in/sakshamagg27">
-                    <i class="fab fa-linkedin-in"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="https://instagram.com/sakshamaggarwal27"
-                    ><i class="fab fa-instagram"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="https://twitter.com/sakshamagg106"
-                    ><i class="fab fa-twitter"></i
-                  ></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="card" style="width: 20rem">
-            <div class="sarthak-image"></div>
-            <div class="card-body about-body">
-              <h3 class="card-title">Sarthak Arora</h3>
-              <p>Frontend Developer and Motion Graphic Artist</p>
+      <div class="contact-footer">
+        +91 8872711250
+        <p>@commit.net.in@gmail.com</p>
+        <a href="https://www.facebook.com/Commit-101648258780401" target="_blank" id="gh"><i
+            class="fab fa-facebook"></i></a>
 
-              <ul>
-                <li>
-                  <a href="https://github.com/sarthakeash">
-                    <i class="fab fa-github"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="https://linkedin.com/in/sarthak-arora-aa92b9201 ">
-                    <i class="fab fa-linkedin-in"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="https://www.instagram.com/sar__aura/"
-                    ><i class="fab fa-instagram"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="https://twitter.com/Sarthak_inSane"
-                    ><i class="fab fa-twitter"></i
-                  ></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="card" style="width: 20rem">
-            <div class="aditya-image"></div>
-            <div class="card-body about-body">
-              <h3 class="card-title">Aditya Thakur</h3>
-              <p>Backend Developer and Systems Engineer</p>
-
-              <ul>
-                <li>
-                  <a href="https://github.com/cry0genic">
-                    <i class="fab fa-github"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="https://linkedin.com/in/aditya11-thakur">
-                    <i class="fab fa-linkedin-in"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="https://instagram.com/aditya_11_"
-                    ><i class="fab fa-instagram"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="https://twitter.com/cry0genic11"
-                    ><i class="fab fa-twitter"></i
-                  ></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        <a href="https://www.linkedin.com/company/commit-incorp" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://twitter.com/CommitInc" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/commitinc/" target="_blank" id="insta"><i class="fab fa-instagram"></i></a>
       </div>
-    </section>
+    </div>
+    <div class="email-footer">
+      <p>Drop Your Email</p>
+      <form action="{% url 'home' %}" class="email-form" method="POST">
+        {% csrf_token %}
+        <button type="submit" class="email-button btn btn-dark btn-md">
+          <i class="fas fa-arrow-right"></i>
+        </button>
+        <input type="text" placeholder="Your Email" name="email-enter" />
+      </form>
+      <p class="copyright">© Commit Inc. 2021</p>
+    </div>
+  </footer>
 
-    <!--///////////////////////////// FOOTER /////////////////////////////////-->
+  <script src="{% static 'js/script.js' %}"></script>
+  <script src="{% static 'js/about-script.js' %}"></script>
+  <script src="{% static 'js/type.js' %}"></script>
+</body>
 
-    <footer>
-      <div class="logo-footer">
-        <a class="navbar-brand" href="{% url 'home' %}">
-          <img
-            src="{% static 'img/logo.png' %}"
-            alt=""
-            width="50"
-            height="50"
-            class="d-inline-block align-text-top flogo"
-          />
-          Commit
-        </a>
-        <p>
-          We build beautiful experiences and humane designs for your robust
-          online presence
-        </p>
-      </div>
-
-      <div id="footer">
-        <div class="footer-links">
-          <a class="nav-item" href="{% url 'work' %}">Work</a>
-          <a class="nav-item" href="{% url 'home' %}">Home</a>
-          <a class="nav-item" href="{% url 'process' %}">Process</a>
-          <a class="nav-item" href="{% url 'about' %}">About</a>
-          <a class="nav-item" href="{% url 'contact' %}">Contact</a>
-        </div>
-
-        <div class="contact-footer">
-          +91 8872711250
-          <p>@commit.net.in@gmail.com</p>
-          <a href="https://github.com/Commit-Inc" target="_blank" id="gh"
-            ><i class="fab fa-github"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/company/commit-incorp"
-            target="_blank"
-            ><i class="fab fa-linkedin-in"></i
-          ></a>
-          <a href="https://twitter.com/CommitInc" target="_blank"
-            ><i class="fab fa-twitter"></i
-          ></a>
-          <a
-            href="https://www.instagram.com/commitinc/"
-            target="_blank"
-            id="insta"
-            ><i class="fab fa-instagram"></i
-          ></a>
-        </div>
-      </div>
-      <div class="email-footer">
-        <p>Drop Your Email</p>
-        <form action="{% url 'home' %}" class="email-form" method="POST">
-          {% csrf_token %}
-          <button type="submit" class="email-button btn btn-dark btn-md">
-            <i class="fas fa-arrow-right"></i>
-          </button>
-          <input type="text" placeholder="Your Email" name="email-enter" />
-        </form>
-        <p class="copyright">© Commit Inc. 2021</p>
-      </div>
-    </footer>
-
-    <script src="{% static 'js/script.js' %}"></script>
-    <script src="{% static 'js/about-script.js' %}"></script>
-    <script src="{% static 'js/type.js' %}"></script>
-  </body>
 </html>

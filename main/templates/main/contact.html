@@ -1,430 +1,282 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="format-detection" content="telephone=no" />
-    <title>Commit Inc.</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css"
-      integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni"
-      crossorigin="anonymous"
-    />
 
-    <!-- bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>Commit Inc.</title>
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css"
+    integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous" />
 
-    <!-- bootstrap JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
+  <!-- bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
+  <!-- bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
 
-    <!-- FONT AWESOME -->
-    <script
-      src="https://kit.fontawesome.com/c8e4d183c2.js"
-      crossorigin="anonymous"
-    ></script>
-    <!--ajax-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- CUSTOM STYLESHEET -->
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
 
-    <link rel="icon" href="{% static "img/favicon.ico" %}">
-    
-    <link rel="stylesheet" href="{% static "css/footer.css" %}"> 
-    <link rel="stylesheet" href="{% static "css/navbar.css" %}"> 
-    <link rel="stylesheet" href="{% static "css/home.css" %}"> 
-    <link rel="stylesheet" href="{% static "css/contact.css" %}"> 
-    
-    <script>
-      $(document).ready(function () {
-        $(".ckbox").click(function () {
-          var txt = "";
-          $(".ckbox:checked").each(function () {
-            txt += $(this).val() + ",";
-          });
-          $("#txtvalues").val(txt);
+  <!-- FONT AWESOME -->
+  <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+  <!--ajax-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- CUSTOM STYLESHEET -->
+
+  <link rel="icon" href="{% static "img/favicon.ico" %}">
+
+  <link rel="stylesheet" href="{% static "css/footer.css" %}">
+  <link rel="stylesheet" href="{% static "css/navbar.css" %}">
+  <link rel="stylesheet" href="{% static "css/home.css" %}">
+  <link rel="stylesheet" href="{% static "css/contact.css" %}">
+
+  <script>
+    $(document).ready(function () {
+      $(".ckbox").click(function () {
+        var txt = "";
+        $(".ckbox:checked").each(function () {
+          txt += $(this).val() + ",";
         });
+        $("#txtvalues").val(txt);
       });
-    </script>
-  </head>
+    });
+  </script>
+</head>
 
-  <body>
-    <!-- ///////////////////////////// NAVBAR /////////////////////////// -->
+<body>
+  <!-- ///////////////////////////// NAVBAR /////////////////////////// -->
 
-    <nav class="navbar navbar-expand-lg">
-      <a class="navbar-brand" href="{% url 'home' %}">
-        <img
-          src="{% static 'img/logo.png' %}"
-          alt=""
-          width="50"
-          height="50"
-          class="d-inline-block align-text-top"
-        />
-        Commit
-      </a>
-      <button
-        class="navbar-toggler second-button collapsed"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-        id="hamb"
-      >
-        <div class="animated-icon2">
-          <span></span><span></span><span></span><span></span>
-        </div>
-      </button>
-      <div
-        class="collapse navbar-collapse lateral-left"
-        id="navbarNavAltMarkup"
-      >
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="{% url 'home' %}">
+      <img src="{% static 'img/logo.png' %}" alt="" width="50" height="50" class="d-inline-block align-text-top" />
+      Commit
+    </a>
+    <button class="navbar-toggler second-button collapsed" type="button" data-toggle="collapse"
+      data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+      aria-label="Toggle navigation" id="hamb">
+      <div class="animated-icon2">
+        <span></span><span></span><span></span><span></span>
+      </div>
+    </button>
+    <div class="collapse navbar-collapse lateral-left" id="navbarNavAltMarkup">
       <div class="navbar-nav ml-auto" id="navlist">
         <a class="nav-item nav-link " href="{% url 'about' %}">About <span class="sr-only">(current)</span></a>
         <a class="nav-item nav-link" href="{% url 'work' %}">Work</a>
         <a class="nav-item nav-link" href="{% url 'process' %}">Process</a>
         <a class="nav-item nav-link active" href="{% url 'contact' %}">Contact</a>
       </div>
-      </div>
-    </nav>
+    </div>
+  </nav>
 
-    <!-- //////////////////////////// HERO SECTION /////////////////////////// -->
+  <!-- //////////////////////////// HERO SECTION /////////////////////////// -->
 
-    <section id="hero">
-      <div class="row title-row">
-        <div class="col-lg-6 hero-info">
-          <div class="contact-box-left">
-            <div class="contact-heading">
-              <h1>Get in touch</h1>
-              <div class="contact-img"></div>
+  <section id="hero">
+    <div class="row title-row">
+      <div class="col-lg-6 hero-info">
+        <div class="contact-box-left">
+          <div class="contact-heading">
+            <h1>Get in touch</h1>
+            <div class="contact-img"></div>
+          </div>
+
+          <p>
+            Fill up the form and our team will get back to you within 24 hours
+          </p>
+
+          <div class="contact-info">
+            <div class="our-services-features">
+              <div class="our-services-feature-image1"></div>
+              <p>+91 8872711250</p>
+            </div>
+            <div class="our-services-features email-service">
+              <div class="our-services-feature-image2"></div>
+              <div class="our-services-description">
+                <p>commit.net.in@gmail.com</p>
+              </div>
             </div>
 
+            <div class="contact-social">
+              <div class="our-services-feature-image3"></div>
+
+              <div class="contact-social-links">
+                <a href="https://github.com/Commit-Incs" target="_blank" id="gh"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/company/commit-incorp" target="_blank"><i
+                    class="fab fa-linkedin-in"></i></a>
+                <a href="https://twitter.com/CommitInc" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/commitinc/" target="_blank" id="insta"><i
+                    class="fab fa-instagram"></i></a>
+              </div>
+
+              <div class="our-services-feature-image4"></div>
+            </div>
+          </div>
+          <div class="contact-bottom">
             <p>
-              Fill up the form and our team will get back to you within 24 hours
+              We are a promising and consistent workforce at your service to
+              simplify your work with utmost dedication and sincerity.
+              Aspiration is to bring the art of technology straight to your
+              cart and building modern & sustainable solutions that redefine
+              the way you are percieved by others.
             </p>
-
-            <div class="contact-info">
-              <div class="our-services-features">
-                <div class="our-services-feature-image1"></div>
-                <p>+91 8872711250</p>
-              </div>
-              <div class="our-services-features email-service">
-                <div class="our-services-feature-image2"></div>
-                <div class="our-services-description">
-                  <p>commit.net.in@gmail.com</p>
-                </div>
-              </div>
-
-              <div class="contact-social">
-                <div class="our-services-feature-image3"></div>
-
-                <div class="contact-social-links">
-                  <a
-                    href="https://github.com/Commit-Incs"
-                    target="_blank"
-                    id="gh"
-                    ><i class="fab fa-github"></i
-                  ></a>
-                  <a
-                    href="https://www.linkedin.com/company/commit-incorp"
-                    target="_blank"
-                    ><i class="fab fa-linkedin-in"></i
-                  ></a>
-                  <a href="https://twitter.com/CommitInc" target="_blank"
-                    ><i class="fab fa-twitter"></i
-                  ></a>
-                  <a
-                    href="https://www.instagram.com/commitinc/"
-                    target="_blank"
-                    id="insta"
-                    ><i class="fab fa-instagram"></i
-                  ></a>
-                </div>
-
-                <div class="our-services-feature-image4"></div>
-              </div>
-            </div>
-            <div class="contact-bottom">
-              <p>
-                We are a promising and consistent workforce at your service to
-                simplify your work with utmost dedication and sincerity.
-                Aspiration is to bring the art of technology straight to your
-                cart and building modern & sustainable solutions that redefine
-                the way you are percieved by others.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <h1 id="contact-heading">Contact Us</h1>
-
-        <div class="col-lg-6 form-grandparent">
-          <div class="contact-form-container">
-            <form action="" method="POST" autocomplete="on">
-              {% csrf_token %}
-              <div class="input-row">
-                <div>
-                  <label for="exampleFormControlInput1" class="form-label"
-                    >First Name</label
-                  >
-                  <input
-                    type="text"
-                    placeholder="Your first Name"
-                    required
-                    name="fName"
-                  />
-                </div>
-                <div>
-                  <label for="exampleFormControlInput1" class="form-label"
-                    >Last Name</label
-                  >
-                  <input
-                    type="text"
-                    placeholder="Your last Name"
-                    required
-                    name="lName"
-                  />
-                </div>
-              </div>
-
-              <div class="input-row">
-                <div class="contact-page-email">
-                  <label for="exampleFormControlInput1" class="form-label"
-                    >Email</label
-                  >
-                  <input
-                    type="email"
-                    placeholder="Your email address"
-                    required
-                    name="email"
-                  />
-                </div>
-              </div>
-
-              <div class="input-row">
-                <div>
-                  <label for="exampleFormControlInput1" class="form-label"
-                    >Phone</label
-                  >
-                  <input
-                    type="text"
-                    placeholder="Your phone number"
-                    required
-                    name="phone"
-                  />
-                </div>
-                <div>
-                  <label for="exampleFormControlInput1" class="form-label"
-                    >Company</label
-                  >
-                  <input
-                    type="text"
-                    placeholder="Your company name"
-                    required
-                    name="company"
-                  />
-                </div>
-              </div>
-
-              <div class="requirements">
-                <label for="exampleFormControlInput1" class="form-label"
-                  >Requirements</label
-                >
-
-                <div class="requirement-buttons">
-                  <div class="requirement-cell">
-                    <input
-                      type="checkbox"
-                      class="btn-check ckbox"
-                      id="btn-check-outlined"
-                      autocomplete="off"
-                      value="webdev"
-                    />
-                    <label class="btn" for="btn-check-outlined"
-                      >Web Development</label
-                    ><br />
-                  </div>
-
-                  <div class="requirement-cell">
-                    <input
-                      type="checkbox"
-                      class="btn-check ckbox"
-                      id="btn-check-2-outlined"
-                      autocomplete="off"
-                      value="appdesign"
-                    />
-                    <label class="btn" for="btn-check-2-outlined"
-                      >App Design</label
-                    ><br />
-                  </div>
-                  <div class="requirement-cell">
-                    <input
-                      type="checkbox"
-                      class="btn-check ckbox"
-                      id="btn-check-3-outlined"
-                      autocomplete="off"
-                      value="webdesign"
-                    />
-                    <label class="btn" for="btn-check-3-outlined"
-                      >Web Design</label
-                    ><br />
-                  </div>
-                  <div class="requirement-cell">
-                    <input
-                      type="checkbox"
-                      class="btn-check ckbox"
-                      id="btn-check-4-outlined"
-                      autocomplete="off"
-                      value="videoediting"
-                    />
-                    <label class="btn" for="btn-check-4-outlined"
-                      >Video Editing</label
-                    ><br />
-                  </div>
-                  <div class="requirement-cell">
-                    <input
-                      type="checkbox"
-                      class="btn-check ckbox"
-                      id="btn-check-5-outlined"
-                      autocomplete="off"
-                      value="apidev"
-                    />
-                    <label class="btn" for="btn-check-5-outlined"
-                      >API Development</label
-                    ><br />
-                  </div>
-                  <div class="requirement-cell">
-                    <input
-                      type="checkbox"
-                      class="btn-check ckbox"
-                      id="btn-check-6-outlined"
-                      autocomplete="off"
-                      value="logodesign"
-                    />
-                    <label class="btn" for="btn-check-6-outlined"
-                      >Logo Design</label
-                    ><br />
-                  </div>
-                  <div class="requirement-cell">
-                    <input
-                      type="checkbox"
-                      class="btn-check ckbox"
-                      id="btn-check-7-outlined"
-                      autocomplete="off"
-                      value="socialMediaManag"
-                    />
-                    <label class="btn" for="btn-check-7-outlined"
-                      >Social Media Management</label
-                    ><br />
-                  </div>
-                </div>
-              </div>
-
-              <div class="input-row">
-                <div class="contact-page-email">
-                  <label for="exampleFormControlInput1" class="form-label"
-                    >Please share anything that will help us prepare</label
-                  >
-                  <input type="text" placeholder="Your message" name="extra" />
-                </div>
-              </div>
-
-              <button type="submit" class="submit-contact">Submit</button>
-              <input type="text" hidden name="requirements" id="txtvalues" />
-              <!--maybe switch button to input if it does not work ;-;-->
-            </form>
           </div>
         </div>
       </div>
-    </section>
-    <footer>
-      <div class="logo-footer">
-        <a class="navbar-brand" href="{% url 'home' %}">
-          <img
-            src="{% static 'img/logo.png' %}"
-            alt=""
-            width="50"
-            height="50"
-            class="d-inline-block align-text-top flogo"
-          />
-          Commit
+
+      <h1 id="contact-heading">Contact Us</h1>
+
+      <div class="col-lg-6 form-grandparent">
+        <div class="contact-form-container">
+          <form action="" method="POST" autocomplete="on">
+            {% csrf_token %}
+            <div class="input-row">
+              <div>
+                <label for="exampleFormControlInput1" class="form-label">First Name</label>
+                <input type="text" placeholder="Your first Name" required name="fName" />
+              </div>
+              <div>
+                <label for="exampleFormControlInput1" class="form-label">Last Name</label>
+                <input type="text" placeholder="Your last Name" required name="lName" />
+              </div>
+            </div>
+
+            <div class="input-row">
+              <div class="contact-page-email">
+                <label for="exampleFormControlInput1" class="form-label">Email</label>
+                <input type="email" placeholder="Your email address" required name="email" />
+              </div>
+            </div>
+
+            <div class="input-row">
+              <div>
+                <label for="exampleFormControlInput1" class="form-label">Phone</label>
+                <input type="text" placeholder="Your phone number" required name="phone" />
+              </div>
+              <div>
+                <label for="exampleFormControlInput1" class="form-label">Company</label>
+                <input type="text" placeholder="Your company name" required name="company" />
+              </div>
+            </div>
+
+            <div class="requirements">
+              <label for="exampleFormControlInput1" class="form-label">Requirements</label>
+
+              <div class="requirement-buttons">
+                <div class="requirement-cell">
+                  <input type="checkbox" class="btn-check ckbox" id="btn-check-outlined" autocomplete="off"
+                    value="webdev" />
+                  <label class="btn" for="btn-check-outlined">Web Development</label><br />
+                </div>
+
+                <div class="requirement-cell">
+                  <input type="checkbox" class="btn-check ckbox" id="btn-check-2-outlined" autocomplete="off"
+                    value="appdesign" />
+                  <label class="btn" for="btn-check-2-outlined">App Design</label><br />
+                </div>
+                <div class="requirement-cell">
+                  <input type="checkbox" class="btn-check ckbox" id="btn-check-3-outlined" autocomplete="off"
+                    value="webdesign" />
+                  <label class="btn" for="btn-check-3-outlined">Web Design</label><br />
+                </div>
+                <div class="requirement-cell">
+                  <input type="checkbox" class="btn-check ckbox" id="btn-check-4-outlined" autocomplete="off"
+                    value="videoediting" />
+                  <label class="btn" for="btn-check-4-outlined">Video Editing</label><br />
+                </div>
+                <div class="requirement-cell">
+                  <input type="checkbox" class="btn-check ckbox" id="btn-check-5-outlined" autocomplete="off"
+                    value="apidev" />
+                  <label class="btn" for="btn-check-5-outlined">API Development</label><br />
+                </div>
+                <div class="requirement-cell">
+                  <input type="checkbox" class="btn-check ckbox" id="btn-check-6-outlined" autocomplete="off"
+                    value="logodesign" />
+                  <label class="btn" for="btn-check-6-outlined">Logo Design</label><br />
+                </div>
+                <div class="requirement-cell">
+                  <input type="checkbox" class="btn-check ckbox" id="btn-check-7-outlined" autocomplete="off"
+                    value="socialMediaManag" />
+                  <label class="btn" for="btn-check-7-outlined">Social Media Management</label><br />
+                </div>
+              </div>
+            </div>
+
+            <div class="input-row">
+              <div class="contact-page-email">
+                <label for="exampleFormControlInput1" class="form-label">Please share anything that will help us
+                  prepare</label>
+                <input type="text" placeholder="Your message" name="extra" />
+              </div>
+            </div>
+
+            <button type="submit" class="submit-contact">Submit</button>
+            <input type="text" hidden name="requirements" id="txtvalues" />
+            <!--maybe switch button to input if it does not work ;-;-->
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="logo-footer">
+      <a class="navbar-brand" href="{% url 'home' %}">
+        <img src="{% static 'img/logo.png' %}" alt="" width="50" height="50"
+          class="d-inline-block align-text-top flogo" />
+        Commit
+      </a>
+      <p>
+        We build beautiful experiences and humane designs for your robust
+        online presence
+      </p>
+    </div>
+
+    <div id="footer">
+      <div class="footer-links">
+        <a class="nav-item" href="{% url 'work' %}">Work</a>
+        <a class="nav-item" href="{% url 'home' %}">Home</a>
+        <a class="nav-item" href="{% url 'process' %}">Process</a>
+        <a class="nav-item" href="{% url 'about' %}">About</a>
+        <a class="nav-item" href="{% url 'contact' %}">Contact</a>
+      </div>
+
+      <div class="contact-footer">
+        +91 8872711250
+        <p>commit.net.in@gmail.com</p>
+        <a href="https://www.facebook.com/Commit-101648258780401" target="_blank" id="gh">
+          <i class="fab fa-facebook"></i>
         </a>
-        <p>
-          We build beautiful experiences and humane designs for your robust
-          online presence
-        </p>
+        <a href="https://www.linkedin.com/company/commit-incorp" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://twitter.com/CommitInc" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/commitinc/" target="_blank" id="insta"><i class="fab fa-instagram"></i></a>
       </div>
+    </div>
+    <div class="email-footer">
+      <p>Drop Your Email</p>
+      <form action="{% url 'contact' %}" class="email-form">
+        <button type="submit" class="email-button btn btn-dark btn-md">
+          <i class="fas fa-arrow-right"></i>
+        </button>
+        <input type="text" placeholder="Your Email" />
+      </form>
+      <p class="copyright">© Commit Inc. 2021</p>
+    </div>
+  </footer>
+  <script src="{% static 'js/script.js' %}"></script>
+</body>
 
-      <div id="footer">
-        <div class="footer-links">
-          <a class="nav-item" href="{% url 'work' %}">Work</a>
-          <a class="nav-item" href="{% url 'home' %}">Home</a>
-          <a class="nav-item" href="{% url 'process' %}">Process</a>
-          <a class="nav-item" href="{% url 'about' %}">About</a>
-          <a class="nav-item" href="{% url 'contact' %}">Contact</a>
-        </div>
-
-        <div class="contact-footer">
-          +91 8872711250
-          <p>commit.net.in@gmail.com</p>
-          <a href="https://github.com/Commit-Inc" target="_blank" id="gh"
-            ><i class="fab fa-github"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/company/commit-incorp"
-            target="_blank"
-            ><i class="fab fa-linkedin-in"></i
-          ></a>
-          <a href="https://twitter.com/CommitInc" target="_blank"
-            ><i class="fab fa-twitter"></i
-          ></a>
-          <a
-            href="https://www.instagram.com/commitinc/"
-            target="_blank"
-            id="insta"
-            ><i class="fab fa-instagram"></i
-          ></a>
-        </div>
-      </div>
-      <div class="email-footer">
-        <p>Drop Your Email</p>
-        <form action="{% url 'contact' %}" class="email-form">
-          <button type="submit" class="email-button btn btn-dark btn-md">
-            <i class="fas fa-arrow-right"></i>
-          </button>
-          <input type="text" placeholder="Your Email" />
-        </form>
-        <p class="copyright">© Commit Inc. 2021</p>
-      </div>
-    </footer>
-    <script src="{% static 'js/script.js' %}"></script>
-  </body>
 </html>
