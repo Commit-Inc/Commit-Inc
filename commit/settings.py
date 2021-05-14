@@ -92,7 +92,7 @@ WSGI_APPLICATION = "commit.wsgi.application"
 #     }
 # }
 
-. . .
+
 
 DATABASES = {
     'default': {
@@ -105,7 +105,7 @@ DATABASES = {
     }
 }
 
-. . .
+
 
 
 # Password validation
