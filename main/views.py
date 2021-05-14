@@ -58,7 +58,7 @@ def contact(request):
         fName = request.POST["fName"]
         lName = request.POST["lName"]
         email = request.POST["email"]
-        phone = request.POST["email"]
+        phone = request.POST["phone"]
         company = request.POST["company"]
         extra = request.POST["extra"]
         requirements = request.POST["requirements"]
