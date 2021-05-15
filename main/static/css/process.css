@@ -158,7 +158,6 @@ body {
 .process-cards {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -578,7 +577,6 @@ body {
   }
 
   .our-services-cards .card {
-    height: 65vh !important;
     width: 18rem !important;
   }
 
@@ -647,7 +645,7 @@ body {
 
 .our-services-cards .card {
   flex: 0 0 auto;
-  height: 65vh;
+  height: 30rem;
   margin: 0 2%;
   border: 0;
   background: linear-gradient(180deg, #FFFFFF 0%, #EBEBEB 100%);
