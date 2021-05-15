@@ -502,6 +502,12 @@ body {
 
 @media (max-width: 567px) {
 
+
+
+  .process-cards {
+    flex-wrap: wrap;
+  }
+
   #hero h1 {
     text-align: center;
     font-weight: 700;
