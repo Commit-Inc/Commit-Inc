@@ -1,5 +1,5 @@
 body {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -288,7 +288,7 @@ h1 {
 
 .card {
   flex: 0 0 auto;
-  height: 65vh;
+  height: 30rem;
   margin: 0 2%;
   background: linear-gradient(180deg, #FFFFFF 0%, #EBEBEB 100%);
   box-shadow: 7px -6px 42px -3px rgba(0, 0, 0, 0.2);
