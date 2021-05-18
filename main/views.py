@@ -22,7 +22,7 @@ def home(request):
                 from_email=Email('"Commit" <commit.net.in@gmail.com>'),
                 to_emails=str(email),
                 subject='Greetings from Commit 👋',
-                html_content= render_to_string("main/email.html"))
+                html_content= render_to_string("main/personalisedEmail.html"))
             try:
                 sg = SendGridAPIClient(api_key=keyconfig.SENSENDGRID_API_KEY)
                 response = sg.send(message)
