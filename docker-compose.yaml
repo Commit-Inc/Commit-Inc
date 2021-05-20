@@ -8,7 +8,7 @@ services:
     env_file:
       - project.env
     ports:
-      - "5432:5432"
+      - 5432:5432
     volumes:
       - postgres-data:/var/lib/postgresql/data
   web:
@@ -23,20 +23,16 @@ services:
     depends_on:
       - db
     volumes:
-      - staticfiles:/home/app/web/staticfile
-      - ./:/var/www/
+      - staticfiles:/home/app/web/staticfiles
   nginx:
     container_name: nginx
-    build: 
-      context: ./nginx
-      dockerfile: Dockerfile
+    image: nginx:mainline-alpine
     restart: always
     ports:
-      - "80:80"
+      - 1337:80
     volumes:
-      #- ./nginx:/etc/nginx/conf.d
+      - ./nginx:/etc/nginx/conf.d
       - staticfiles:/home/app/web/staticfiles/
-      - ./nginx/nginx.conf:/etc/nginx/sites-available/default
     depends_on:
       - web
 
