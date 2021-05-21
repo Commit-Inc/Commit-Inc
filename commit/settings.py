@@ -106,6 +106,18 @@ DATABASES = {
 }
 
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql",
+#         "NAME": Database.NAME,
+#         "USER": Database.USER,
+#         "PASSWORD": Database.PASSWORD,
+#         "HOST": Database.HOST,
+#         "PORT": Database.PORT,
+#     }
+# }
+
+
 
 
 # Password validation
@@ -145,7 +157,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = "/static/"
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_ROOT = os.path.join(BASE_DIR, "static") #change back to static once deployed ;-;
 
 #won't be used this time ;-;
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
